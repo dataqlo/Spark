@@ -24,7 +24,7 @@ fileRDD.map( x=> x.split(",")(0))
 // map function without using shortcodes
 val orderIdAndDate = fileRDD.map( x=> {
 	val splitedData = x.split(",")
-	splitedData(0), splitedData(1)
+	(splitedData(0), splitedData(1))
 })
 
 
