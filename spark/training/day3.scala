@@ -12,9 +12,10 @@ sortSeq.sorted
 case class Result( val name: String, val marks: Int)
 val resultSeq = Seq(Result("John",10),Result("Jane",40),Result("Tom",50),Result("Jerry",20),Result("Popeye",30))
 resultSeq.sortBy(._marks)
-//res21: Seq[Result] = List(Result(Jane,40), Result(Jerry,20), Result(John,10), Result(Popeye,30), Result(Tom,50))
-resultSeq.sortBy(._name)
 //res22: Seq[Result] = List(Result(John,10), Result(Jerry,20), Result(Popeye,30), Result(Jane,40), Result(Tom,50))
+resultSeq.sortBy(._name)
+//res21: Seq[Result] = List(Result(Jane,40), Result(Jerry,20), Result(John,10), Result(Popeye,30), Result(Tom,50))
+
 
 // sortWith ==> sorting based on a comparator function for custom sorting ( desc sorting odf marks)
 resultSeq.sortWith((leftElem,rightElem) => leftElem.marks > rightElem.marks)
