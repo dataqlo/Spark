@@ -1,0 +1,61 @@
+
+day1.scala 
+==========
+
+1. Read orders data from hdfs location via scala source api, and convert it into spark RDD (line:11-15)
+
+2. Create RDD by reading file directly using spark'e method (line 17-18)
+
+3. display only the orderID data from orders rdd (line 20-21)
+
+4. From orders dataset, generate pairRDD of (orderID,date)
+(line 24-28)
+
+5. Calculate the sum of orders for the month of july, 2013 for completed orders without using reduce (line 31-35)
+
+6. Calculate the sum of orders for the month of july, 2013 for completed orders with reduce (line 38-40)
+
+
+day2.scala
+==========
+
+7. Create RDD for orders and ordersItems dataset (line 6-7)
+
+8. View / get only the first record from orders RDD (line 10)
+
+9. Create pairRDD called as ordersMap with orderID as Integer and date in YYYY-MM i.e (orderID,date)  (line 12)
+
+10. Create pairRDD called as orderItemsMap with orderId and price (orderId,price)  (line 13-16)
+
+11. From orders Items dataset generate revenue sorted by orders id and save the file to hdfs location as a text file (line 18-19)
+
+12. From orders Items dataset generate revenue sorted by orders id in reverse and save the file to hdfs location as a text file (line 21-22)
+
+13. Perform inner join between order and order Items dataset. (line 26-27)
+
+14. Perform join between order and order Items dataset and get all the data from orders table (line 26-27)
+
+15. Perform join between order and order Items dataset. Get all the data from orders table where values not null (line 26-27)
+
+day3.scala
+===========
+
+16. Using scala sort the natural numbers/data into ascending order (line 7-8)
+
+17. Create a case class called Result with variables name and marks, create a list of this class with some values (line 11-13)
+
+18. sort based the above list based on marks and names (line 14-17)
+
+19. sort the list based on custom sorting logic based on descending order of marks (line 20-23)
+
+20. From a given list get the forst 3 elements (line 25-27)
+
+21. Get the elements from an integet list whose values are not divisible by 2 (line 29-31)
+
+22. Get only the first element from an integer list whose value is not divisible by 2 (line 33-35)
+
+23. From an iterable list get the first two elements. (line 42-47)
+
+24. Convert and iterable list to iterator and get the next value. (line 48-55)
+
+25. Using Products dataset get the top 3 priced product for each category (line 58-82)
