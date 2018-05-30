@@ -72,3 +72,21 @@ day4.scala
 28. For a given name list in format "last_name, first_name", generate list in "firstname lastname" format from Right element to left.(line 42-49)
 
 29. For a given list of product (category,(productname,price)) find the the max priced product from the list for each category (line 42-60)
+
+
+day5.scala
+==========
+
+30. Reading xml file into scala (line 2-11)
+
+31. Print the name of all person from person.xml file (line 18-19)
+
+31. The usage of "\" and "\\" (line 21-26)
+
+32. What is nodeseq, node and element
+
+33. Get the values of attribute "id" from all nodes of "person" tag (line 33-36)
+
+34. Get the details of a person ( i.e node ) where the person id is 1001 using scala map (line 38-45)
+
+35. Get the details of a person ( i.e node ) where the person id is 1001 using loop (line 47-59)

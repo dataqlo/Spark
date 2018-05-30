@@ -1,4 +1,4 @@
-// XML Parsing
+234// XML Parsing
 import scala.io.Source
 
 //Read raw  xml file and conver to string from Iterator[String]
@@ -7,6 +7,8 @@ val xmlRawFile = Source.fromFile("/home/cloudera/Desktop/dataset/xml/person.xml"
 
 // convert Raw xml text file to xml
 val xmlFile = xml.XML.loadString(xmlRawFile)
+//OR
+val xmlFile = XML.loadFile("/home/cloudera/Desktop/dataset/xml/person.xml")
 //file: scala.xml.Elem
 
 // XPath searching
