@@ -1,0 +1,22 @@
+<root>
+	<person id="1001">
+		<personal>
+			<name>John Doe</name>
+			<city>New York</city>
+		</personal>
+		<professional>
+			<organization>Shell LLC.</organization>
+			<designation>CEO</designation>
+		</professional>
+	</person>
+	<person id="1002">
+		<personal>
+			<name>Jane Doe</name>
+			<city>Chicago</city>
+		</personal>
+		<professional>
+			<organization>Shell Tech LLC.</organization>
+			<designation>CFO</designation>
+		</professional>
+	</person>
+</root>

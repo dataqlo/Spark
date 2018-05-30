@@ -2,7 +2,7 @@
 import scala.io.Source
 
 //Read raw  xml file and conver to string from Iterator[String]
-// person.xml file 
+// Dataset:  https://github.com/AbhishekSolanki/learn/tree/master/dataset/xml/person.xml
 val xmlRawFile = Source.fromFile("/home/cloudera/Desktop/dataset/xml/person.xml").getLines.mkString
 
 // convert Raw xml text file to xml
