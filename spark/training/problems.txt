@@ -68,7 +68,7 @@ day4.scala
 26. Initialize each parition of RDD with some value and perform sum on list,and add the initial value in each partition (line 4-21)
 
 27. For a given name list in format "last_name, first_name", generate list in "firstname lastname" format from left element to right.(line 23-39)
-
+U
 28. For a given name list in format "last_name, first_name", generate list in "firstname lastname" format from Right element to left.(line 42-49)
 
 29. For a given list of product (category,(productname,price)) find the the max priced product from the list for each category (line 42-60)
@@ -90,3 +90,23 @@ day5.scala
 34. Get the details of a person ( i.e node ) where the person id is 1001 using scala map (line 38-45)
 
 35. Get the details of a person ( i.e node ) where the person id is 1001 using loop (line 47-59)
+
+
+day6.scala
+==========
+
+37. declaring xml directly into val (line 1-14)
+
+38. Elem, Node, NodeSeq, NodeBuffer, PCDATA, Text, Unparsed
+
+39.  Generating dynamic xml (line 20-24)
+
+40. Using map with list for dynamic xml (line 26-28)
+
+41. Exploring node before and &+ method (line 30-39)
+
+42. preety printing (line 41-51)
+
+43. Saving xml file (line 53-55)
+
+44. loading xml directly from url (line 58-59)
