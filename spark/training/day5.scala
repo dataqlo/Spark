@@ -44,6 +44,9 @@ val personIDs = (xmlFile \"person").map( element =>
 		None
 	}
 ).filter(_ != None)(0)
+// Alternate Way
+val personId = ( xmlFile \"person").filter(element => (element /"@id").text.toInt == 1001)
+
 
 // using for loop
 import util.control.Breaks._

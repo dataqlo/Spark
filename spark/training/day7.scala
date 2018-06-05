@@ -1,4 +1,4 @@
-// aggregateByKey an efficient alternative to groupByKey()
+// aggregateByKey an efficient alternative for groupByKey()
 // In groupByKey() all the KV pairs is shuffeled across network to a single reducer.
 
 // Find out the distinct key from the given array of KV paris.
@@ -39,3 +39,44 @@ val mergeFunction  = (partionHashSet1:HashSet[String],partionHashSet2:HashSet[St
 
 // Applying aggregatebyKey on KV
 val distinctKeys = KV.map(x=>(x._1,x)).aggregateByKey(partionHashSet)(combinerFunction,mergeFunction)
+
+
+
+
+// combineByKey - alternative to groupByKey 
+val KVRaw = Array( ("a",1),("a",2),("a",3),("b",1),("b",2),("c",1) )
+val KV = sc.parallelize(KVRaw)
+
+type occuranceOfNumber = (Int, Int)
+
+// combineByKey takes the first argument as function insted of values as in aggregarByKey
+val createCombiner = ( num: Int)  =>  (1, num) : occuranceOfNumber
+
+// combiner will append the output to createCombiner with each Value
+val combiner = ( acc: occuranceOfNumber, rec: Int ) => {
+	( acc._1 + 1 , acc._2 + rec )
+}
+
+// the value of combiner from each partition is merged into one
+val merger = ( partition1: occuranceOfNumber, partition2: occuranceOfNumber ) => {
+	( partition1._1 + partition2._2, partition1._2 + partition2._2 )
+}
+
+// using combineByKey
+// K is passed to createCombiner for e.g (a,1) 1 is passed to createCombiner and return (1,1)
+// the value of combiner is passed to combiner with V to merge it into new / existing K on the given partition.
+// merger will merge the computed value by combiner from all partition
+val  countNumberAndTotal = KV.combineByKey(createCombiner,combiner,merger)
+
+// declaring type of average (K,no. of occurance, total value)
+type forAverageFunction = (String,(Int,Int))
+
+// implementing averaging function
+val averageFunction = ( pairRDD: forAverageFunction)  => {
+	val num  =  pairRDD._2._1
+	val total = pairRDD._2._2
+	(pairRDD._1, total/num)
+}
+
+// calculating averages
+val average = countNumberAndTotal.collectAsMap().map(averageFunction)
