@@ -110,3 +110,17 @@ day6.scala
 43. Saving xml file (line 53-55)
 
 44. loading xml directly from url (line 58-59)
+
+
+day7.scala
+==========
+
+45. Find out the distinct key from the given array of KV paris using groupByKey() (line 6-9)
+
+46. declaring mutable HashSet OR Creat initialize value for aggregateByKey() (line 20 -21)
+
+47. Combiner function for aggregateByKey() (line 23-32)
+
+49 . Merger function for aggregateByKey() (line 34-38)
+
+50. Using aggregateByKey() (line 41 , line 1- 41)
