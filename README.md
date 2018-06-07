@@ -1,4 +1,7 @@
 ## Scratching Spark
+
+Join the discussion group on [Telegram "Scratching Spark"](https://t.me/joinchat/HJenjxF74FTWE8M4E3qzWQ) for new updates
+
 File|Details
 ---|---
 [Day 1](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day1.scala)|**Scala:** IO, Collections <br> **Spark:** IO, RDD, Basic Transformation and Actions  -> map, reduce, filter
