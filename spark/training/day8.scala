@@ -118,3 +118,41 @@ carObj.getSpeed(100)
 //Speed: 100
 carObj.getFuel
 //Fuel Guage: 0
+
+
+// Case Class
+
+// 1. good for modelling immutable data 
+case class Person( name: String, age:Int, location: String)
+//new keyword is not used to instantiate case classes, as they have apply method which takes care of object creation
+val person1 = Person("John",20,"CA")
+// the parameters in case class are public; val is ued to assign which makes the object immutable, var  is discouraged.
+person1.name ="jane"
+//<console>:29: error: reassignment to val
+
+
+// 2. case classes are compared by structure and not by reference. person1 and person2 refers to different object but values are same
+val person2 = Person("John",20,"CA")
+person1==person2
+//res1: Boolean = true
+
+// 3. Copying: create a copy of instance by using copy. The name of person2 is used for person3, but it also copied the age and location.
+val person3 = person2.copy(name =person2.name)
+//person3: Person = Person(John,20,CA)
+
+// 4. pattern matching
+abstract class Notification
+
+case class Email(sender: String, title: String) extends Notification
+case class SMS(caller: String, message: String) extends Notification
+
+
+// notification is abstrac' super class has two  concrete case classes, SMS and Email, we can drirectly do 
+// patern matching on class using case 
+def showNotification(notification: Notification): String = {
+  notification match {
+    case Email(email, title) =>
+      s"You got an email from $email with title: $title"
+    case SMS(number, message) =>
+      s"You got an SMS from $number! Message: $message"
+  }
