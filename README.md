@@ -13,7 +13,7 @@ File|Details
 [Day 7](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day7.scala)|**Spark:** groupByKey(), aggregateByKey() and combineByKey()
 [Day 8](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day8.scala)|**Scala:** OOP, companion object, traits, case classes
 [Day 9](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day9.scala)|**Scala:** Collections manipulation
-[Day 10](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day10.scala)|**Spark:** Working with file formats - Json, Avro & Parquet
+[Day 10](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day10.scala)|**SparkSQL:** DataFrame
 [Day 11](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day11.scala)|Developing application in eclipse with Spark, Scala and Maven
 [Day 12](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day12.scala)|**Spark:** Creating custom input format
 
