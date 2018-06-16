@@ -40,3 +40,11 @@ ordersCount.show
 //+-----+
 //|68883|
 //+-----+
+
+//operations
+// df.show : shows the content of the dataframe
+// df.printschema : print the schema in tree format 
+// df.select("column_name") : select particular columns
+// df.select("some_column" > 1 ) OR select("some_column" +1 ) : to comapre or to increment values
+// df.filter("some_column" > 10 ) : filter out records from a particular column based on some condition
+// df.groupBy("column_name") : group the data based on some column_name
