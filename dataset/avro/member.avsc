@@ -1,0 +1,19 @@
+{
+ "type" : "record",
+ "name" : "member_schema",
+ "namespace" : "com.dataqlo.avro",
+ "fields" : [ {
+ "name" : "id",
+ "type" : "string",
+ "doc" : "id of user"
+ }, {
+ "name" : "name",
+ "type" : "string",
+ "doc" : "name of user"
+ }, {
+ "name" : "timestamp",
+ "type" : "long",
+ "doc" : "Unix epoch time in seconds"
+ } ],
+ "doc:" : "Basic information of user"
+ }
