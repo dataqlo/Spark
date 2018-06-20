@@ -1,0 +1,52 @@
+{
+	"type":"record",
+	"name":"FootballResult",
+	"namespace":"com.dataqlo.datset.avro",
+	"fields":[{
+      "name":"date",
+      "type":"string",
+      "doc":"date of the match"
+      },
+      {
+      "name":"home_team",
+      "type":"string",
+      "doc":"name of the home team"
+      },
+      {
+      "name":"away_team",
+      "type":"string",
+      "doc":"name of the away team"
+      },
+      {
+      "name":"home_score",
+      "type":"int",
+      "doc":"full time home team score including extra time, not including penalty-shootouts"
+      },
+      {
+      "name":"away_score",
+      "type":"int",
+      "doc":"full time away team score including extra time, not including penalty-shootouts"
+      },
+      {
+      "name":"tournament",
+      "type":"string",
+      "doc":"name of the tournament"
+      },
+      {
+      "name":"city",
+      "type":"string",
+      "doc":"name of the city where the match was played"
+      },
+      {
+      "name":"country",
+      "type":"string",
+      "doc":"name of the country where the match was played"
+      },
+      {
+      "name":"neutral",
+      "type":"string",
+      "doc":"column indicating whether the match was played at a neutral venue"
+      }
+	],
+	"doc":"football result 1872 till 2018"
+}
