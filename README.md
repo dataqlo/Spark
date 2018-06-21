@@ -15,7 +15,7 @@ File|Details
 [Day 9](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day9.scala)|**Scala:** Collections manipulation
 [Day 10](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day10.scala)|**SparkSQL:** DataFrame - What ?, Reflection, Programmatic Schema <br> DataSet
 [Day 11](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day11.scala)|Developing application in eclipse with Spark, Scala and Maven
-[Day 12](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day12.scala)|**SparkSQL:** File Formats: Avro
+[Day 12](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day12.scala)|**SparkSQL:** File Formats: Avro, Parquet
 
 
 ---

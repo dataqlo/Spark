@@ -1,11 +1,13 @@
 // File Formats
-// AVRO line (4-80)
+// AVRO (line 4-80)
+// Parquet (line 84-107)
 
 // 1. AVRO
 // The file is defined by avro schema; while searializing / deserializing data, schema is used. Schema is sent with data or is stored 
 // within the data. Avro data + schema is fully self describing format. Data and schema are represented in JSON
 // schema contains: namespace, type ( "record" by default), fields[], doc for commenting
 // fields[].name and fields[].type for each column
+// Avro is a record/row oriented file format.
 
 
 // create an avro file with schem and data
@@ -78,3 +80,35 @@ val parameters = Map("recordName" -> name, "recordNamespace" -> namespace)
 
 df.write.options(parameters).avro("dataset/avro/member_param_test")
 // the output file will now have new name and namespace values
+
+// 2. Parquet
+//columnar storage, limits IO
+// Internally the data is divided into horizontal partition into rows called as row group.
+//Column chunk: A chunk of the data for a particular column. These live in a particular row group and is guaranteed to be contiguous in the file.
+//Page: Column chunks are divided up into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). 
+//There can be multiple page types which is interleaved in a column chunk.
+////Hierarchically, a file consists of one or more row groups. 
+//A row group contains exactly one column chunk per column. Column chunks contain one or more pages.
+// Unit of parallelization : Unit of parallelization, Unit of parallelization, Unit of parallelization
+
+
+// Write to parquet from avro
+import com.databricks.spark.avro._
+val df = sqlContext.read.avro("dataset/avro/member.avro")
+df.write.parquet("dataset/parquet/member/")
+//-rw-r--r--   1 cloudera cloudera          0 2018-06-20 20:22 dataset/parquet/member/_SUCCESS
+//-rw-r--r--   1 cloudera cloudera        401 2018-06-20 20:22 dataset/parquet/member/_common_metadata
+//-rw-r--r--   1 cloudera cloudera        759 2018-06-20 20:22 dataset/parquet/member/_metadata
+//-rw-r--r--   1 cloudera cloudera        857 2018-06-20 20:22 dataset/parquet/member/part-r-00000-bc8fc62b-e124-40bb-a57b-296677f8105f.gz.parquet
+
+
+// Read from parquet
+val dfParquet = sqlContext.read.parquet("dataset/parquet/member")
+dfParquet.show
+
+
+// Schema Merging in Avro and Parquet
+// Since schema merging is a relatively expensive operation, and is not a necessity in most cases, turned it off by default 
+// setting data source option mergeSchema to true when reading Parquet files (as shown in the examples below), or
+// setting the global SQL option spark.sql.parquet.mergeSchema to true.
+sqlContext.read.option("mergeSchema", "true").parquet("data/test_table")
