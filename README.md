@@ -16,7 +16,7 @@ File|Details
 [Day 10](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day10.scala)|**SparkSQL:** DataFrame - What ?, Reflection, Programmatic Schema <br> DataSet
 [Day 11](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day11.scala)|Developing application in eclipse with Spark, Scala and Maven
 [Day 12](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day12.scala)|**SparkSQL:** File Formats: Avro, Parquet
-
+[Day 13](https://github.com/AbhishekSolanki/learn/blob/master/spark/training/day13.scala)|**SparkStreaming:**
 
 ---
 ![with love from DataQlo.com](http://dataqlo.com/wp-content/uploads/2018/01/cropped-DataQlo-32x32.png "with love from DataQlo.com")
