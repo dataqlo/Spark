@@ -10,11 +10,12 @@ echo "CLOUDERA_DEFAULTS=/usr/local/apache-ant/apache-ant-1.9.2/bin:/usr/local/bi
 
 function fDownloadComponents {
 
- if [ $JAVA_DOWNLOAD == "Y" ]; then yes "y" | wget --no-cookies \ --header "Cookie: oraclelicense=accept-securebackup-cookie" $JAVA_DOWNLOAD_URL -P $downloadDir/; fi
+ if [ $JAVA_DOWNLOAD == "Y" ]; then yes "y" | wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" $JAVA_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $SCALA_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $SCALA_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $SCALA_ECLIPSE_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $SCALA_ECLIPSE_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $ELASTICSEARCH_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $ELASTICSEARCH_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $MAVEN_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $MAVEN_DOWNLOAD_URL -P $downloadDir/; fi
+ if [ $TOMCAT_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $TOMCAT_DOWNLOAD_URL -P $downloadDir/; fi
 }
 
 function fInstallComponents {
@@ -48,16 +49,23 @@ function fInstallComponents {
 
  if [ $ELASTICSEARCH_INSTALL == "Y" ]
  then
- 	sed -i '/#ELASTICSEARCH_HOME added by dataqlo.com/d' ~/.bashrc 
+  sed -i '/#ELASTICSEARCH_HOME added by dataqlo.com/d' ~/.bashrc 
     echo "ELASTICSEARCH_HOME=${ELASTICSEARCH_INSTALL_DIR}/elasticsearch-${ELASTICSEARCH_VERSION} #ELASTICSEARCH_HOME added by dataqlo.com" >> ~/.bashrc
- 	tar -xzvf $downloadDir/${ELASTICSEARCH_DOWNLOAD_URL##*/} -C $ELASTICSEARCH_INSTALL_DIR
+  tar -xzvf $downloadDir/${ELASTICSEARCH_DOWNLOAD_URL##*/} -C $ELASTICSEARCH_INSTALL_DIR
  fi
 
  if [ $MAVEN_INSTALL == "Y" ]
  then
- 	sed -i '/#M2_HOME added by dataqlo.com/d' ~/.bashrc 
+  sed -i '/#M2_HOME added by dataqlo.com/d' ~/.bashrc 
     echo "M2_HOME=${MAVEN_INSTALL_DIR}/apache-maven-${MAVEN_VERSION} #M2_HOME added by dataqlo.com" >> ~/.bashrc
- 	tar -xzvf $downloadDir/${MAVEN_DOWNLOAD_URL##*/} -C $MAVEN_INSTALL_DIR
+  tar -xzvf $downloadDir/${MAVEN_DOWNLOAD_URL##*/} -C $MAVEN_INSTALL_DIR
+ fi
+
+ if [ $TOMCAT_INSTALL == "Y" ]
+ then
+  sed -i '/#CATALINA_HOME added by dataqlo.com/d' ~/.bashrc 
+    echo "CATALINA_HOME=${TOMCAT_INSTALL_DIR}/apache-tomcat-${TOMCAT_VERSION} #CATALINA_HOME added by dataqlo.com" >> ~/.bashrc
+  tar -xzvf $downloadDir/${TOMCAT_DOWNLOAD_URL##*/} -C $TOMCAT_INSTALL_DIR
  fi
 
 
@@ -69,5 +77,5 @@ fInstallComponents
 
 # adding PATH in profile and refreshing env variables
 sed -i '/#PATH added by dataqlo.com/d' ~/.bashrc
-echo "PATH=\$JAVA_HOME/bin:\$CLOUDERA_DEFAULTS:\$SCALA_HOME/bin:\$ELASTICSEARCH_HOME/bin:\$M2_HOME/bin #PATH added by dataqlo.com" >> ~/.bashrc
+echo "PATH=\$JAVA_HOME/bin:\$CLOUDERA_DEFAULTS:\$SCALA_HOME/bin:\$ELASTICSEARCH_HOME/bin:\$M2_HOME/bin:\$CATALINA_HOME/bin #PATH added by dataqlo.com" >> ~/.bashrc
 source ~/.bashrc
