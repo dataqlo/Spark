@@ -16,6 +16,7 @@ function fDownloadComponents {
  if [ $ELASTICSEARCH_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $ELASTICSEARCH_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $MAVEN_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $MAVEN_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $TOMCAT_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $TOMCAT_DOWNLOAD_URL -P $downloadDir/; fi
+ if [ $MARKLOGIC_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $MARKLOGIC_DOWNLOAD_URL -P $downloadDir/; fi 
 }
 
 function fInstallComponents {
@@ -49,23 +50,37 @@ function fInstallComponents {
 
  if [ $ELASTICSEARCH_INSTALL == "Y" ]
  then
-  sed -i '/#ELASTICSEARCH_HOME added by dataqlo.com/d' ~/.bashrc 
+ 	sed -i '/#ELASTICSEARCH_HOME added by dataqlo.com/d' ~/.bashrc 
     echo "ELASTICSEARCH_HOME=${ELASTICSEARCH_INSTALL_DIR}/elasticsearch-${ELASTICSEARCH_VERSION} #ELASTICSEARCH_HOME added by dataqlo.com" >> ~/.bashrc
-  tar -xzvf $downloadDir/${ELASTICSEARCH_DOWNLOAD_URL##*/} -C $ELASTICSEARCH_INSTALL_DIR
+ 	tar -xzvf $downloadDir/${ELASTICSEARCH_DOWNLOAD_URL##*/} -C $ELASTICSEARCH_INSTALL_DIR
  fi
 
  if [ $MAVEN_INSTALL == "Y" ]
  then
-  sed -i '/#M2_HOME added by dataqlo.com/d' ~/.bashrc 
+ 	sed -i '/#M2_HOME added by dataqlo.com/d' ~/.bashrc 
     echo "M2_HOME=${MAVEN_INSTALL_DIR}/apache-maven-${MAVEN_VERSION} #M2_HOME added by dataqlo.com" >> ~/.bashrc
-  tar -xzvf $downloadDir/${MAVEN_DOWNLOAD_URL##*/} -C $MAVEN_INSTALL_DIR
+ 	tar -xzvf $downloadDir/${MAVEN_DOWNLOAD_URL##*/} -C $MAVEN_INSTALL_DIR
  fi
 
  if [ $TOMCAT_INSTALL == "Y" ]
  then
-  sed -i '/#CATALINA_HOME added by dataqlo.com/d' ~/.bashrc 
+ 	sed -i '/#CATALINA_HOME added by dataqlo.com/d' ~/.bashrc 
     echo "CATALINA_HOME=${TOMCAT_INSTALL_DIR}/apache-tomcat-${TOMCAT_VERSION} #CATALINA_HOME added by dataqlo.com" >> ~/.bashrc
-  tar -xzvf $downloadDir/${TOMCAT_DOWNLOAD_URL##*/} -C $TOMCAT_INSTALL_DIR
+ 	tar -xzvf $downloadDir/${TOMCAT_DOWNLOAD_URL##*/} -C $TOMCAT_INSTALL_DIR
+ fi
+
+ if [ $MARKLOGIC_INSTALL == "Y" ]
+ then
+  #sed -i '/#CATALINA_HOME added by dataqlo.com/d' ~/.bashrc 
+   # echo "CATALINA_HOME=${TOMCAT_INSTALL_DIR}/apache-tomcat-${TOMCAT_VERSION} #CATALINA_HOME added by dataqlo.com" >> ~/.bashrc
+   yes "y" | sudo yum install $downloadDir/${MARKLOGIC_DOWNLOAD_URL##*/}
+ fi
+
+ if [ $KAFKA_INSTALL == "Y" ]
+ then
+  sed -i '/#KAFKA_HOME added by dataqlo.com/d' ~/.bashrc 
+  echo "KAFKA_HOME=/usr/lib/kafka #KAFKA_HOME added by dataqlo.com" >> ~/.bashrc
+   yes "y" | sudo yum install kafka
  fi
 
 
