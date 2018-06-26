@@ -48,3 +48,4 @@ ssc.awaitTermination()  // Wait for the computation to terminate
 // Any operation on DStream translates to the underlying RDDs
 // Input DStream: stream of data received from streaming source except file stream is associated with a "Receiver" Object
 // 2 Category of built in source - BASIC: File System, Socket Connection ADVANCE: Kafka, Flume, Twitter
+
