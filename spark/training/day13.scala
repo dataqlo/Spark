@@ -49,4 +49,25 @@ ssc.awaitTermination()  // Wait for the computation to terminate
 // Input DStream: stream of data received from streaming source except file stream is associated with a "Receiver" Object
 // 2 Category of built in source - BASIC: File System, Socket Connection ADVANCE: Kafka, Flume, Twitter
 
+// Kafka Integration
 
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka._
+
+ val ssc = new StreamingContext(sc, Seconds(2))
+
+ val kafkaParams = Map[String, Object](
+  "bootstrap.servers" -> "localhost:9092,anotherhost:9092",
+  "key.deserializer" -> classOf[StringDeserializer],
+  "value.deserializer" -> classOf[StringDeserializer],
+  "group.id" -> "use_a_separate_group_id_for_each_stream",
+  "auto.offset.reset" -> "latest",
+  "enable.auto.commit" -> (false: java.lang.Boolean)
+)
+
+ val kafkaStream = KafkaUtils.createDirectStream[String, String](
+      ssc,
+      LocationStrategies.PreferConsistent,
+      ConsumerStrategies.Subscribe[String, String](topicsSet, kafkaParams))
+
+stream.map(record => (record.key, record.value))
