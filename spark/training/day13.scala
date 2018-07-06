@@ -71,5 +71,3 @@ import org.apache.spark.streaming.kafka._
       ConsumerStrategies.Subscribe[String, String](topicsSet, kafkaParams))
 
 stream.map(record => (record.key, record.value))
-
-
