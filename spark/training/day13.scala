@@ -49,25 +49,46 @@ ssc.awaitTermination()  // Wait for the computation to terminate
 // Input DStream: stream of data received from streaming source except file stream is associated with a "Receiver" Object
 // 2 Category of built in source - BASIC: File System, Socket Connection ADVANCE: Kafka, Flume, Twitter
 
-// Kafka Integration
+// Kafka Integration ( read day14.scala for basic understanding of kafka )
 
+
+// write some data to topic: topic-name-1
+// kafka-console-producer --broker-list localhost:9092 -opic topic-name-1
+
+//Approach-1 Receiver based
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka._
 
- val ssc = new StreamingContext(sc, Seconds(2))
+val ssc = new StreamingContext(sc, Seconds(2))
+val kafkaStream = KafkaUtils.createStream(ssc, "localhost:2181","spark-streaming-consumer-group", Map("topic-name-1" -> 5))
+kafkaStream.print()
+ssc.start()
+ssc.awaitTermination()
 
- val kafkaParams = Map[String, Object](
-  "bootstrap.servers" -> "localhost:9092,anotherhost:9092",
-  "key.deserializer" -> classOf[StringDeserializer],
-  "value.deserializer" -> classOf[StringDeserializer],
-  "group.id" -> "use_a_separate_group_id_for_each_stream",
-  "auto.offset.reset" -> "latest",
-  "enable.auto.commit" -> (false: java.lang.Boolean)
-)
 
- val kafkaStream = KafkaUtils.createDirectStream[String, String](
-      ssc,
-      LocationStrategies.PreferConsistent,
-      ConsumerStrategies.Subscribe[String, String](topicsSet, kafkaParams))
+// Approach-2 Direct ( no receiver ) FOR KAFKA BELOW 0.10
+// spark-shell --jars /usr/lib/kafka/libs/kafka_2.11-0.10.2-kafka-2.2.0.jar
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka._
+import  org.apache.kafka.common.serialization.StringDeserializer
+import org.apache.kafka.clients.consumer.ConsumerConfig
+import kafka.serializer.StringDecoder // this will not work so need to use the below import statement
+import _root_.kafka.serializer.StringDecoder
 
-stream.map(record => (record.key, record.value))
+
+val ssc = new StreamingContext(sc, Seconds(5))
+val topicsSet = Set("topic-name-1")
+
+
+val kafkaParams = Map[String, String](
+      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "localhost:9092",
+      ConsumerConfig.GROUP_ID_CONFIG -> "groupId"
+ )
+
+ val messages= KafkaUtils.createDirectStream[String, String,StringDecoder, StringDecoder](
+  ssc, kafkaParams, topicsSet)
+
+
+messages.print()
+ssc.start()
+ssc.awaitTermination()

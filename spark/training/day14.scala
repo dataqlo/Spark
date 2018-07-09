@@ -24,13 +24,22 @@
 //  --override broker.id=100 \
 
 // create topic 
-// kafka-topics --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic topic_name_1
+// kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topic-name-1
 
 // list available topics
 // kafka-topics --zookeeper localhost:2181 --list
 
 // describing topic
-// kafka-topics --zookeeper localhost:2181 --describe --topic topic_name_1
+// kafka-topics --zookeeper localhost:2181 --describe --topic topic-name-1
 
 // delete topic (  --override delete.topic.enable=true - should be used while starting the kafka server to delete topic )
-// kafka-topics --zookeeper localhost:2181 --delete --topic topic_name_1
+// kafka-topics --zookeeper localhost:2181 --delete --topic topic-name-1
+
+// write some messages in topics via producer
+// kafka-console-producer --broker-list localhost:9092 --topic topic-name-1
+// messaage:one
+// message:2
+// ctrl+d
+
+// read data from topics via consumer
+// kafka-console-consumer --bootstrap-server localhost:9092 --topic topic-name-1 --from-beginning
