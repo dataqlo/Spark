@@ -17,7 +17,7 @@ File|Details
 [Day 11](https://github.com/AbhishekSolanki/Spark/blob/master/spark/training/day11.scala)|Developing application in eclipse with Spark, Scala and Maven
 [Day 12](https://github.com/AbhishekSolanki/Spark/blob/master/spark/training/day12.scala)|**SparkSQL:** File Formats: Avro, Parquet
 [Day 13](https://github.com/AbhishekSolanki/Spark/blob/master/spark/training/day13.scala)|**SparkStreaming:** StreamingContext, DStream,<br> Kafka Integration ( < kafka v0.10 ): Receiver and direct approach
-[Day 14](https://github.com/AbhishekSolanki/Spark/blob/master/spark/training/day13.scala)|**Kafka:** Terms, basic commands 
+[Day 14](https://github.com/AbhishekSolanki/Spark/blob/master/spark/training/day14.scala)|**Kafka:** Terms, basic commands 
 
 ---
 ![with love from DataQlo.com](http://dataqlo.com/wp-content/uploads/2018/01/cropped-DataQlo-32x32.png "with love from DataQlo.com")
