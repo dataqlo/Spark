@@ -2,17 +2,6 @@
 # Author: github.com/AbhishekSolanki
 
 receiveData=true
-kill -9 `cat logs/kafka_server.pid`
-echo "`date` INFO: Starting kafka server"
-nohup sh /usr/lib/kafka/bin/kafka-server-start.sh /usr/lib/kafka/config/server.properties > logs/kafka_server.out 2>&1 &
-echo $! > logs/kafka_server.pid
-echo "`date` INFO: Kafka server started !"
-
-echo "`date` INFO: Creating Kafka topics"
-kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic bod-q-mastercard
-kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic bod-q-visa
-kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic bod-q-amex
-echo "`date` INFO: Kafka Topics Created !"
 
 while $receiveData
 do
