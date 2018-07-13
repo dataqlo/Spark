@@ -23,3 +23,5 @@ to reinstall again keep _DOWNLOAD=N amd _INSTALL=Y
 - Elasticsearch 6.3.0
 - Apache Tomcat 8.5.31
 - Apache Kafka 0.10.2
+- Python 2.7, PIP2.7
+- kafka-python library
