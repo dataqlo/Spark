@@ -4,6 +4,7 @@
 	<groupId>com.dataqlo.com</groupId>
 	<artifactId>BankOfDataProcessing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- application and dependencies requires scala 2.11.11-->
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
