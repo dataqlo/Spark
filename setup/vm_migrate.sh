@@ -17,6 +17,8 @@ function fDownloadComponents {
  if [ $MAVEN_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $MAVEN_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $TOMCAT_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $TOMCAT_DOWNLOAD_URL -P $downloadDir/; fi
  if [ $MARKLOGIC_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $MARKLOGIC_DOWNLOAD_URL -P $downloadDir/; fi 
+ if [ $PYTHON27_DOWNLOAD == "Y" ]; then yes "y" | wget --no-check-certificate $PYTHON27_DOWNLOAD_URL -P $downloadDir/; yes "y" | wget https://bootstrap.pypa.io/get-pip.py -P $downloadDir/; fi 
+
 }
 
 function fInstallComponents {
@@ -82,6 +84,24 @@ function fInstallComponents {
   echo "KAFKA_HOME=/usr/lib/kafka #KAFKA_HOME added by dataqlo.com" >> ~/.bashrc
    yes "y" | sudo yum install kafka
  fi
+
+ if [ $PYTHON27_INSTALL == "Y" ]
+ then
+ 	yes "y" | sudo yum install gcc
+ 	sudo tar -xzf  $downloadDir/Python-2.7.10.tgz -C $PYTHON27_INSTALL_DIR
+ 	cd $PYTHON27_INSTALL_DIR/Python-2.7.10/
+ 	sudo ./configure
+ 	sudo make altinstall
+ 	cd -
+    sudo python2.7 $downloadDir/get-pip.py
+    sudo sed -i -e 's/#!/#!\/usr\/local\/bin\/python2.7/g' /usr/local/bin/pip2.7
+ fi
+
+ if [ $PIP27_DEPENDENCIES == "Y" ]
+ then
+ 	sudo pip2.7 install kafka-python
+ fi
+
 
 
 }

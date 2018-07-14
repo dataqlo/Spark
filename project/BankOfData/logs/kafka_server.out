@@ -1,0 +1,412 @@
+mkdir: cannot create directory `/usr/lib/kafka/bin/../logs': Permission denied
+Java HotSpot(TM) 64-Bit Server VM warning: Cannot open file /usr/lib/kafka/bin/../logs/kafkaServer-gc.log due to No such file or directory
+
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/lib/kafka/libs/slf4j-log4j12-1.7.21.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/lib/kafka/libs/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/kafka-request.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [requestAppender].
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/kafka-authorizer.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [authorizerAppender].
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/controller.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [controllerAppender].
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/server.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [kafkaAppender].
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/log-cleaner.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [cleanerAppender].
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /usr/lib/kafka/bin/../logs/state-change.log (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:223)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at org.apache.kafka.common.utils.Utils.<clinit>(Utils.java:59)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:72)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+log4j:ERROR Either File or DatePattern options are not set for appender [stateChangeAppender].
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+[2018-07-11 19:56:19,780] INFO KafkaConfig values: 
+	advertised.host.name = null
+	advertised.listeners = null
+	advertised.port = null
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	compression.type = producer
+	connections.max.idle.ms = 600000
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delete.topic.enable = false
+	fetch.purgatory.purge.interval.requests = 1000
+	group.max.session.timeout.ms = 300000
+	group.min.session.timeout.ms = 6000
+	host.name = 
+	inter.broker.listener.name = null
+	inter.broker.protocol.version = 0.10.2-IV0
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,TRACE:TRACE,SASL_SSL:SASL_SSL,PLAINTEXT:PLAINTEXT
+	listeners = null
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 134217728
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = /tmp/kafka-logs
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.message.format.version = 0.10.2-IV0
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	message.max.bytes = 1000012
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 1440
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 3
+	offsets.topic.segment.bytes = 104857600
+	port = 9092
+	principal.builder.class = class org.apache.kafka.common.security.auth.DefaultPrincipalBuilder
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.requests = 500
+	quota.consumer.default = 9223372036854775807
+	quota.producer.default = 9223372036854775807
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 10000
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	security.inter.broker.protocol = PLAINTEXT
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	unclean.leader.election.enable = true
+	zookeeper.connect = localhost:2181
+	zookeeper.connection.timeout.ms = 6000
+	zookeeper.session.timeout.ms = 6000
+	zookeeper.set.acl = false
+	zookeeper.sync.time.ms = 2000
+ (kafka.server.KafkaConfig)
+[2018-07-11 19:56:19,898] INFO starting (kafka.server.KafkaServer)
+[2018-07-11 19:56:19,900] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2018-07-11 19:56:19,935] INFO Starting ZkClient event thread. (org.I0Itec.zkclient.ZkEventThread)
+[2018-07-11 19:56:19,939] INFO Client environment:zookeeper.version=3.4.5-cdh5.9.0--1, built on 10/21/2016 08:05 GMT (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,939] INFO Client environment:host.name=quickstart.cloudera (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,939] INFO Client environment:java.version=1.8.0_172 (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,939] INFO Client environment:java.vendor=Oracle Corporation (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,939] INFO Client environment:java.home=/usr/java/jdk1.8.0_172/jre (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,939] INFO Client environment:java.class.path=:/usr/lib/kafka/bin/../libs/activation-1.1.jar:/usr/lib/kafka/bin/../libs/aopalliance-1.0.jar:/usr/lib/kafka/bin/../libs/aopalliance-repackaged-2.5.0-b05.jar:/usr/lib/kafka/bin/../libs/apacheds-i18n-2.0.0-M15.jar:/usr/lib/kafka/bin/../libs/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/lib/kafka/bin/../libs/api-asn1-api-1.0.0-M20.jar:/usr/lib/kafka/bin/../libs/api-util-1.0.0-M20.jar:/usr/lib/kafka/bin/../libs/argparse4j-0.5.0.jar:/usr/lib/kafka/bin/../libs/asm-3.1.jar:/usr/lib/kafka/bin/../libs/avro-1.7.6-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/cglib-2.2.1-v20090111.jar:/usr/lib/kafka/bin/../libs/commons-beanutils-1.8.3.jar:/usr/lib/kafka/bin/../libs/commons-beanutils-core-1.8.0.jar:/usr/lib/kafka/bin/../libs/commons-cli-1.2.jar:/usr/lib/kafka/bin/../libs/commons-codec-1.9.jar:/usr/lib/kafka/bin/../libs/commons-collections-3.2.2.jar:/usr/lib/kafka/bin/../libs/commons-compress-1.4.1.jar:/usr/lib/kafka/bin/../libs/commons-configuration-1.6.jar:/usr/lib/kafka/bin/../libs/commons-digester-1.8.jar:/usr/lib/kafka/bin/../libs/commons-el-1.0.jar:/usr/lib/kafka/bin/../libs/commons-httpclient-3.1.jar:/usr/lib/kafka/bin/../libs/commons-io-2.4.jar:/usr/lib/kafka/bin/../libs/commons-lang-2.6.jar:/usr/lib/kafka/bin/../libs/commons-logging-1.2.jar:/usr/lib/kafka/bin/../libs/commons-math3-3.1.1.jar:/usr/lib/kafka/bin/../libs/commons-net-3.1.jar:/usr/lib/kafka/bin/../libs/commons-pool2-2.2.jar:/usr/lib/kafka/bin/../libs/connect-api-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/connect-file-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/connect-json-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/connect-runtime-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/connect-transforms-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/curator-client-2.9.1.jar:/usr/lib/kafka/bin/../libs/curator-framework-2.9.1.jar:/usr/lib/kafka/bin/../libs/grizzled-slf4j_2.11-1.0.2.jar:/usr/lib/kafka/bin/../libs/gson-2.2.4.jar:/usr/lib/kafka/bin/../libs/guava-16.0.1.jar:/usr/lib/kafka/bin/../libs/guava-18.0.jar:/usr/lib/kafka/bin/../libs/guice-3.0.jar:/usr/lib/kafka/bin/../libs/guice-servlet-3.0.jar:/usr/lib/kafka/bin/../libs/hadoop-annotations-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-auth-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-common-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-mapreduce-client-common-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-mapreduce-client-core-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-mapreduce-client-jobclient-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-mapreduce-client-shuffle-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-yarn-api-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-yarn-client-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-yarn-common-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-yarn-server-common-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hadoop-yarn-server-nodemanager-2.6.0-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/hk2-api-2.5.0-b05.jar:/usr/lib/kafka/bin/../libs/hk2-locator-2.5.0-b05.jar:/usr/lib/kafka/bin/../libs/hk2-utils-2.5.0-b05.jar:/usr/lib/kafka/bin/../libs/htrace-core4-4.0.1-incubating.jar:/usr/lib/kafka/bin/../libs/httpclient-4.4.1.jar:/usr/lib/kafka/bin/../libs/httpcore-4.4.1.jar:/usr/lib/kafka/bin/../libs/jackson-annotations-2.6.0.jar:/usr/lib/kafka/bin/../libs/jackson-annotations-2.8.0.jar:/usr/lib/kafka/bin/../libs/jackson-annotations-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-core-2.6.2.jar:/usr/lib/kafka/bin/../libs/jackson-core-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-core-asl-1.8.8.jar:/usr/lib/kafka/bin/../libs/jackson-databind-2.6.2.jar:/usr/lib/kafka/bin/../libs/jackson-databind-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-jaxrs-1.8.8.jar:/usr/lib/kafka/bin/../libs/jackson-jaxrs-base-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-jaxrs-json-provider-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-mapper-asl-1.8.8.jar:/usr/lib/kafka/bin/../libs/jackson-module-jaxb-annotations-2.8.5.jar:/usr/lib/kafka/bin/../libs/jackson-xc-1.8.8.jar:/usr/lib/kafka/bin/../libs/jasper-compiler-5.5.23.jar:/usr/lib/kafka/bin/../libs/jasper-runtime-5.5.23.jar:/usr/lib/kafka/bin/../libs/javassist-3.20.0-GA.jar:/usr/lib/kafka/bin/../libs/javax.annotation-api-1.2.jar:/usr/lib/kafka/bin/../libs/javax.inject-1.jar:/usr/lib/kafka/bin/../libs/javax.inject-2.5.0-b05.jar:/usr/lib/kafka/bin/../libs/java-xmlbuilder-0.4.jar:/usr/lib/kafka/bin/../libs/javax.servlet-api-3.1.0.jar:/usr/lib/kafka/bin/../libs/javax.ws.rs-api-2.0.1.jar:/usr/lib/kafka/bin/../libs/jaxb-api-2.2.2.jar:/usr/lib/kafka/bin/../libs/jaxb-impl-2.2.3-1.jar:/usr/lib/kafka/bin/../libs/jersey-client-1.9.jar:/usr/lib/kafka/bin/../libs/jersey-client-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-common-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-container-servlet-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-container-servlet-core-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-core-1.9.jar:/usr/lib/kafka/bin/../libs/jersey-guava-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-guice-1.9.jar:/usr/lib/kafka/bin/../libs/jersey-json-1.9.jar:/usr/lib/kafka/bin/../libs/jersey-media-jaxb-2.24.jar:/usr/lib/kafka/bin/../libs/jersey-server-1.9.jar:/usr/lib/kafka/bin/../libs/jersey-server-2.24.jar:/usr/lib/kafka/bin/../libs/jets3t-0.9.0.jar:/usr/lib/kafka/bin/../libs/jettison-1.1.jar:/usr/lib/kafka/bin/../libs/jetty-6.1.26.cloudera.4.jar:/usr/lib/kafka/bin/../libs/jetty-continuation-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-http-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-http-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-io-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-io-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-security-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-security-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-server-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-server-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-servlet-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-servlet-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-servlets-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/jetty-util-6.1.26.cloudera.4.jar:/usr/lib/kafka/bin/../libs/jetty-util-9.2.14.v20151106.jar:/usr/lib/kafka/bin/../libs/jetty-util-9.2.15.v20160210.jar:/usr/lib/kafka/bin/../libs/joda-convert-1.7.jar:/usr/lib/kafka/bin/../libs/joda-time-2.7.jar:/usr/lib/kafka/bin/../libs/jopt-simple-5.0.3.jar:/usr/lib/kafka/bin/../libs/jsch-0.1.42.jar:/usr/lib/kafka/bin/../libs/json4s-ast_2.11-3.3.0.jar:/usr/lib/kafka/bin/../libs/json4s-core_2.11-3.3.0.jar:/usr/lib/kafka/bin/../libs/json4s-jackson_2.11-3.3.0.jar:/usr/lib/kafka/bin/../libs/json4s-scalap_2.11-3.3.0.jar:/usr/lib/kafka/bin/../libs/jsp-api-2.1.jar:/usr/lib/kafka/bin/../libs/jsr305-3.0.0.jar:/usr/lib/kafka/bin/../libs/juniversalchardet-1.0.3.jar:/usr/lib/kafka/bin/../libs/kafka_2.11-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/kafka_2.11-0.10.2-kafka-2.2.0-sources.jar:/usr/lib/kafka/bin/../libs/kafka_2.11-0.10.2-kafka-2.2.0-test-sources.jar:/usr/lib/kafka/bin/../libs/kafka-clients-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/kafka-http-metrics-reporter-0.10.0-kafka-2.1.0.jar:/usr/lib/kafka/bin/../libs/kafka-log4j-appender-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/kafka-streams-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/kafka-streams-examples-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/kafka-tools-0.10.2-kafka-2.2.0.jar:/usr/lib/kafka/bin/../libs/leveldbjni-all-1.8.jar:/usr/lib/kafka/bin/../libs/libthrift-0.9.3.jar:/usr/lib/kafka/bin/../libs/log4j-1.2.17.jar:/usr/lib/kafka/bin/../libs/lz4-1.3.0.jar:/usr/lib/kafka/bin/../libs/metrics-core-2.2.0.jar:/usr/lib/kafka/bin/../libs/metrics-servlet-2.2.0.jar:/usr/lib/kafka/bin/../libs/mime-util-2.1.3.jar:/usr/lib/kafka/bin/../libs/osgi-resource-locator-1.0.1.jar:/usr/lib/kafka/bin/../libs/paranamer-2.8.jar:/usr/lib/kafka/bin/../libs/protobuf-java-2.5.0.jar:/usr/lib/kafka/bin/../libs/reflections-0.9.10.jar:/usr/lib/kafka/bin/../libs/rl_2.11-0.4.10.jar:/usr/lib/kafka/bin/../libs/rocksdbjni-5.0.1.jar:/usr/lib/kafka/bin/../libs/scala-library-2.11.8.jar:/usr/lib/kafka/bin/../libs/scala-parser-combinators_2.11-1.0.4.jar:/usr/lib/kafka/bin/../libs/scalatra_2.11-2.3.1.jar:/usr/lib/kafka/bin/../libs/scalatra-common_2.11-2.3.1.jar:/usr/lib/kafka/bin/../libs/scalatra-json_2.11-2.3.1.jar:/usr/lib/kafka/bin/../libs/scala-xml_2.11-1.0.5.jar:/usr/lib/kafka/bin/../libs/sentry-binding-kafka-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-core-common-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-core-model-db-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-core-model-kafka-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-policy-common-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-policy-kafka-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-provider-common-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-provider-db-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/sentry-provider-file-1.5.1-cdh5.11.0.jar:/usr/lib/kafka/bin/../libs/servlet-api-2.5.jar:/usr/lib/kafka/bin/../libs/shiro-core-1.2.3.jar:/usr/lib/kafka/bin/../libs/slf4j-api-1.7.21.jar:/usr/lib/kafka/bin/../libs/slf4j-api-1.7.5.jar:/usr/lib/kafka/bin/../libs/slf4j-log4j12-1.7.21.jar:/usr/lib/kafka/bin/../libs/slf4j-log4j12-1.7.5.jar:/usr/lib/kafka/bin/../libs/snappy-java-1.1.2.6.jar:/usr/lib/kafka/bin/../libs/stax-api-1.0-2.jar:/usr/lib/kafka/bin/../libs/validation-api-1.1.0.Final.jar:/usr/lib/kafka/bin/../libs/xmlenc-0.52.jar:/usr/lib/kafka/bin/../libs/xz-1.0.jar:/usr/lib/kafka/bin/../libs/zkclient-0.10.jar:/usr/lib/kafka/bin/../libs/zookeeper-3.4.5-cdh5.9.0.jar:/usr/lib/kafka/bin/../libs/zookeeper-3.4.9.jar (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,940] INFO Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:os.version=2.6.32-754.el6.x86_64 (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:user.name=cloudera (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:user.home=/home/cloudera (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,944] INFO Client environment:user.dir=/home/cloudera/Desktop/projects/BankOfData (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,948] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@54d9d12d (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:19,980] INFO Waiting for keeper state SyncConnected (org.I0Itec.zkclient.ZkClient)
+[2018-07-11 19:56:19,981] INFO Opening socket connection to server quickstart.cloudera/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2018-07-11 19:56:20,009] INFO Socket connection established, initiating session, client: /127.0.0.1:58244, server: quickstart.cloudera/127.0.0.1:2181 (org.apache.zookeeper.ClientCnxn)
+[2018-07-11 19:56:20,026] INFO Session establishment complete on server quickstart.cloudera/127.0.0.1:2181, sessionid = 0x1648c53d07a0012, negotiated timeout = 6000 (org.apache.zookeeper.ClientCnxn)
+[2018-07-11 19:56:20,033] INFO zookeeper state changed (SyncConnected) (org.I0Itec.zkclient.ZkClient)
+[2018-07-11 19:56:20,282] INFO Cluster ID = cGV63mfBQh2p8j_1Zz400w (kafka.server.KafkaServer)
+[2018-07-11 19:56:20,306] INFO [ThrottledRequestReaper-Fetch], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2018-07-11 19:56:20,311] INFO [ThrottledRequestReaper-Produce], Starting  (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2018-07-11 19:56:20,387] FATAL [Kafka Server 0], Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
+kafka.common.KafkaException: Failed to acquire lock on file .lock in /tmp/kafka-logs. A Kafka instance in another process or thread is using this directory.
+	at kafka.log.LogManager$$anonfun$lockLogDirs$1.apply(LogManager.scala:106)
+	at kafka.log.LogManager$$anonfun$lockLogDirs$1.apply(LogManager.scala:103)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:35)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at kafka.log.LogManager.lockLogDirs(LogManager.scala:103)
+	at kafka.log.LogManager.<init>(LogManager.scala:65)
+	at kafka.server.KafkaServer.createLogManager(KafkaServer.scala:649)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:208)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:39)
+	at kafka.Kafka$.main(Kafka.scala:67)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:76)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+[2018-07-11 19:56:20,397] INFO [Kafka Server 0], shutting down (kafka.server.KafkaServer)
+[2018-07-11 19:56:20,400] INFO Terminate ZkClient event thread. (org.I0Itec.zkclient.ZkEventThread)
+[2018-07-11 19:56:20,403] INFO EventThread shut down (org.apache.zookeeper.ClientCnxn)
+[2018-07-11 19:56:20,403] INFO Session: 0x1648c53d07a0012 closed (org.apache.zookeeper.ZooKeeper)
+[2018-07-11 19:56:20,406] INFO [Kafka Server 0], shut down completed (kafka.server.KafkaServer)
+[2018-07-11 19:56:20,406] FATAL Fatal error during KafkaServerStartable startup. Prepare to shutdown (kafka.server.KafkaServerStartable)
+kafka.common.KafkaException: Failed to acquire lock on file .lock in /tmp/kafka-logs. A Kafka instance in another process or thread is using this directory.
+	at kafka.log.LogManager$$anonfun$lockLogDirs$1.apply(LogManager.scala:106)
+	at kafka.log.LogManager$$anonfun$lockLogDirs$1.apply(LogManager.scala:103)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:35)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at kafka.log.LogManager.lockLogDirs(LogManager.scala:103)
+	at kafka.log.LogManager.<init>(LogManager.scala:65)
+	at kafka.server.KafkaServer.createLogManager(KafkaServer.scala:649)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:208)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:39)
+	at kafka.Kafka$.main(Kafka.scala:67)
+	at com.cloudera.kafka.wrap.Kafka$.main(Kafka.scala:76)
+	at com.cloudera.kafka.wrap.Kafka.main(Kafka.scala)
+[2018-07-11 19:56:20,408] INFO [Kafka Server 0], shutting down (kafka.server.KafkaServer)
